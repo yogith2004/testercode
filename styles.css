@@ -1,0 +1,82 @@
+/* CSS Utama untuk Tampilan di Desktop */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffebf0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Agar tombol tidak keluar dari jendela browser */
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e91e63;
+}
+
+.button-container {
+    margin-top: 20px;
+    position: relative;
+    height: 150px; /* Tinggi kontainer untuk tombol */
+}
+
+button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, top 0.2s, left 0.2s; /* Animasi */
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #d81b60;
+}
+
+#rightButton {
+    position: relative; /* Mulai dengan posisi tetap */
+}
+
+/* MEDIA QUERY UNTUK HANDPHONE (LAYAR KECIL) */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+        justify-content: flex-start; /* Menyusun konten di bagian atas layar */
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 90%; /* Ukuran lebih kecil agar muat di layar handphone */
+        max-width: none;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Ukuran judul lebih kecil untuk layar kecil */
+    }
+
+    button {
+        padding: 8px 15px; /* Ukuran tombol sedikit lebih kecil */
+        font-size: 0.9em;
+    }
+
+    .button-container {
+        height: 120px; /* Kontainer tombol lebih kecil */
+    }
+}
